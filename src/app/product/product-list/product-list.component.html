@@ -1,0 +1,51 @@
+<div class="card">
+    <div class="card-heeader">
+        Lista de productos
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-2">
+                Filtrar por:
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Filtro</h3>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table"*ngIf="productos.length">
+                <thead>
+                    <tr>
+                        <th>numero</th>
+                        <th>Modelo</th>
+                        <th>numero</th>
+                        <th>Descripcion</th>
+                        <th>Año</th>
+                        <th>Marca</th>
+                        <th>Imagen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let producto of productos">
+                        <td>{{producto.productoId}}</td>
+                        <td>{{producto.Modelo}}</td>
+                        <td>{{producto.productoId}}</td>
+                        <td>{{producto.Descripcion}}</td>
+                        <td>{{producto.year}}</td>
+                        <td>{{producto.Marca}}</td>
+                        <td>
+                            <img [src]="producto.imageUrl" 
+                            [title]="producto.Modelo"
+                            [style.width.px]="imageWidth"
+                            [style.margin.px]="imageMargin">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
