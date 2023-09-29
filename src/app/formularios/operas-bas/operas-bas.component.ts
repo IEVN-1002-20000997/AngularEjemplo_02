@@ -10,12 +10,10 @@ export class OperasBasComponent {
   num1 = '';
   num2 = '';
   resultado = 0;
-  operacion: string | null = null; // Establece la operación inicial en null
+  operacion: string | null = null; 
 
   calcular() {
     if (this.operacion === null) {
-      // Realiza algún manejo de error o muestra un mensaje al usuario
-      // porque no se ha seleccionado una operación.
       return;
     }
 
